@@ -1,4 +1,4 @@
-package com.example.duzezadanieocena
+package com.example.zadaniemarzec
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,17 +11,23 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 
-class tabela_ocen : AppCompatActivity() {
+class Informacje_o_uzytkowniku : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tabela_ocen)
+        setContentView(R.layout.activity_informacje_ouzytkowniku)
 
-       
+
         val User_Data = intent.getStringArrayExtra("userinfo")
         findViewById<TextView>(R.id.Textview_Toolbar_text).text = "${User_Data?.get(1)} ${User_Data?.get(2)}"
         findViewById<TextView>(R.id.TextView_nav_username).text = User_Data?.get(0)
 
-        supportActionBar?.hide() //
+
+        findViewById<TextView>(R.id.Textview_userinfo_nick).text = User_Data?.get(0)
+        findViewById<TextView>(R.id.Textview_userinfo_imie).text = User_Data?.get(1)
+        findViewById<TextView>(R.id.Textview_userinfo_nazwisko).text = User_Data?.get(2)
+        findViewById<TextView>(R.id.Textview_userinfo_klasa).text = User_Data?.get(3)
+
+        supportActionBar?.hide()
 
 
         findViewById<Button>(R.id.Button_nav_close).setOnClickListener {
@@ -46,12 +52,12 @@ class tabela_ocen : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.Button_nav_marks).setOnClickListener {
-            Toast.makeText(this, "Jesteś już na stronie z ocenami!", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, tabela_ocen::class.java).putExtra("userinfo", User_Data))
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_in_left)
         }
 
         findViewById<Button>(R.id.Button_nav_user_info).setOnClickListener {
-            startActivity(Intent(this, Informacje_o_uzytkowniku::class.java).putExtra("userinfo", User_Data))
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_in_left)
+            Toast.makeText(this, "Jesteś już na stronie z informacjami o użytkowniku!", Toast.LENGTH_SHORT).show()
         }
     }
 }

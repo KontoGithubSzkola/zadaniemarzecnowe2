@@ -1,8 +1,7 @@
-package com.example.duzezadanieocena
+package com.example.zadaniemarzec
 
 import android.content.Intent
 import android.os.Bundle
-import android.transition.TransitionInflater
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -12,8 +11,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityOptionsCompat
-import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.navigation.NavigationView
 
 

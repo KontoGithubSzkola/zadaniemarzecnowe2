@@ -1,4 +1,4 @@
-package com.example.duzezadanieocena
+package com.example.zadaniemarzec
 
 import org.junit.Test
 
