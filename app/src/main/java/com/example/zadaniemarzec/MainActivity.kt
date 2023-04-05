@@ -94,7 +94,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     fun RefreshUserUIElements(User_Data: Array<String>):Unit{
         findViewById<TextView>(R.id.TextView_nav_username).text = User_Data[0]
         findViewById<TextView>(R.id.Textview_Toolbar_text).text = "${User_Data[1]} ${User_Data[2]}"
