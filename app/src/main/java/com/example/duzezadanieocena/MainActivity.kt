@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        // Obsługa chowania się manu nawigacji oraz jego animowanie
+
         findViewById<Button>(R.id.Button_nav_close).setOnClickListener {
             val navigationView = findViewById<NavigationView>(R.id.nav_view)
             val animation = AnimationUtils.loadAnimation(this, R.anim.slide_out_left)
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             navigationView.visibility = View.GONE
         }
 
-        // Obsługa pokazywania się manu nawigacji oraz jego animowanie
+
         findViewById<ImageView>(R.id.button_hamburger_menu).setOnClickListener {
             val navigationView = findViewById<NavigationView>(R.id.nav_view)
             val animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
