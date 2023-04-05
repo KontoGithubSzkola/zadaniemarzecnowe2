@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             navigationView.visibility = View.VISIBLE
         }
 
-        // Obsługa przejś
+
         findViewById<Button>(R.id.Button_nav_homepage).setOnClickListener {
             Toast.makeText(this, "Jesteś już na stronie głównej", Toast.LENGTH_SHORT).show()
         }
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        // Obsługa przycisku logowania
+
         findViewById<Button>(R.id.Button_login).setOnClickListener {
             val nick = findViewById<EditText>(R.id.Input_nick).text.toString()
             val imie = findViewById<EditText>(R.id.Input_imie).text.toString()
