@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         var logged = false
         var User_Data = arrayOf("", "", "", "")
-
         val data = intent.getStringArrayExtra("userinfo")
         if (data != null) {
             User_Data = data
@@ -30,10 +29,7 @@ class MainActivity : AppCompatActivity() {
             findViewById<LinearLayout>(R.id.Login_Form).visibility = View.GONE
             findViewById<TextView>(R.id.Textview_form_text).visibility = View.VISIBLE
         }
-
         supportActionBar?.hide()
-
-
         findViewById<Button>(R.id.Button_nav_close).setOnClickListener {
             val navigationView = findViewById<NavigationView>(R.id.nav_view)
             val animation = AnimationUtils.loadAnimation(this, R.anim.slide_out_left)
@@ -41,14 +37,12 @@ class MainActivity : AppCompatActivity() {
             navigationView.visibility = View.GONE
         }
 
-
         findViewById<ImageView>(R.id.button_hamburger_menu).setOnClickListener {
             val navigationView = findViewById<NavigationView>(R.id.nav_view)
             val animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
             navigationView.startAnimation(animation)
             navigationView.visibility = View.VISIBLE
         }
-
 
         findViewById<Button>(R.id.Button_nav_homepage).setOnClickListener {
             Toast.makeText(this, "Jesteś już na stronie głównej", Toast.LENGTH_SHORT).show()
