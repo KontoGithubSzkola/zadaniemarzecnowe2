@@ -159,7 +159,9 @@
         android:id="@+id/Login_Form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical">
+        android:gravity="center_horizontal|center_vertical"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="204dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -171,7 +173,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Textview_nick"/>
+                android:text="@string/Textview_nick" />
+
             <EditText
                 android:id="@+id/Input_nick"
                 android:layout_width="wrap_content"
@@ -183,7 +186,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Textview_imie"/>
+                android:text="@string/Textview_imie" />
+
             <EditText
                 android:id="@+id/Input_imie"
                 android:layout_width="wrap_content"
@@ -195,7 +199,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Textview_nazwisko"/>
+                android:text="@string/Textview_nazwisko" />
+
             <EditText
                 android:id="@+id/Input_nazwisko"
                 android:layout_width="wrap_content"
@@ -207,7 +212,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Textview_klasa"/>
+                android:text="@string/Textview_klasa" />
+
             <EditText
                 android:id="@+id/Input_klasa"
                 android:layout_width="wrap_content"
@@ -215,11 +221,12 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName" />
+
             <Button
                 android:id="@+id/Button_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zaloguj"/>
+                android:text="Zaloguj" />
         </LinearLayout>
     </LinearLayout>
 
